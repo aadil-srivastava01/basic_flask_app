@@ -10,12 +10,8 @@ from resources.store import Store,Stores
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydb.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'aadil'
+app.secret_key = '#@$%1707@@#$1995'
 api = Api(app)
-
-@app.before_first_request
-def create_tables():
-    db.create_all()
 
 jwt = JWT(app,authenticate,identity) #/auth
 
